@@ -236,9 +236,17 @@ app.use(express.urlencoded({ extended: true }));
 
 // MongoDB Connection
   mongoose
-    .connect("mongodb://127.0.0.1:27017/grapesjs_project_db")
+    .connect(
+      "mongodb+srv://biharikumarrawat841501:bihari123@cluster0.nzchf5w.mongodb.net/grapesjs_project_db"
+    )
     .then(() => console.log("Connected Successfully to MongoDB"))
     .catch((err) => console.error(" MongoDB connection error:", err));
+
+// // MongoDB Connection
+//   mongoose
+//     .connect("mongodb://127.0.0.1:27017/grapesjs_project_db")
+//     .then(() => console.log("Connected Successfully to MongoDB"))
+//     .catch((err) => console.error(" MongoDB connection error:", err));
 
 // Schemas & Models
 const pageSchema = new mongoose.Schema({
